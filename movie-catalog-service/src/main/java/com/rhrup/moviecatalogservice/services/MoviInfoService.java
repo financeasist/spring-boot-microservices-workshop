@@ -21,7 +21,6 @@ public class MoviInfoService {
         return new CatalogItem(movie.getName(), movie.getDesc(), rating.getRatingValue());
     }
 
-    @Scheduled
     private CatalogItem getFallbackCatalogItem(Rating rating) {
         return new CatalogItem("Movie name not found", "", rating.getRatingValue());
     }

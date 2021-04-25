@@ -1,4 +1,4 @@
-package com.rhrup.movieinfoservice.model;
+package com.rhrup.movieinfoservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
