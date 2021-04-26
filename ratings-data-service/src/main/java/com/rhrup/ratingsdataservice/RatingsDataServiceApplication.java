@@ -1,14 +1,8 @@
 package com.rhrup.ratingsdataservice;
 
-import com.rhrup.ratingsdataservice.model.Rating;
-import com.rhrup.ratingsdataservice.repository.RatingRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -16,9 +10,9 @@ public class RatingsDataServiceApplication {
 
 //	private static final Logger log = LoggerFactory.getLogger(RatingsDataServiceApplication.class);
 
-	public static void main(String[] args) {
-		SpringApplication.run(RatingsDataServiceApplication.class);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(RatingsDataServiceApplication.class);
+    }
 
 //	@Bean
 //	public CommandLineRunner demo(RatingRepository repository) {
