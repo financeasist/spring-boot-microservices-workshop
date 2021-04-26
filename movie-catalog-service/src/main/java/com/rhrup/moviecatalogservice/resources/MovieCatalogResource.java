@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 @RestController
 @RequestMapping("/catalog")
@@ -31,7 +32,7 @@ public class MovieCatalogResource {
                 .getRatings()
                 .stream()
                 .map(rating -> moviInfoService.getCatalogItem(rating))
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 }
 
