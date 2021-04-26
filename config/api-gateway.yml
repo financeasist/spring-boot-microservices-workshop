@@ -6,7 +6,7 @@ spring:
     gateway:
       routes:
         - id: movie-catalog
-          uri: lb://movie-catalog-cervice
+          uri: lb://movie-catalog-service
           predicates:
             - Path=/catalogs/**
 #          filters:
