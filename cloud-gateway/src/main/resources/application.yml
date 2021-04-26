@@ -1,0 +1,22 @@
+server:
+  port: 9191
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: movie-catalog
+          uri: lb://movie-catalog-service
+          predicates:
+            - Path=/catalogs/**
+        #          filters:
+        #            - RewritePath=/name(?<segment>.*), $\{segment}
+        - id: movie-info
+          uri: lb://movie-info-service
+          predicates:
+            - Path=/movies/**
+        - id: ratings-data
+          uri: lb://ratings-data-service
+          predicates:
+            - Path=/ratingsdata/**
